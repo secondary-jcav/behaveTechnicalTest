@@ -34,12 +34,11 @@ def enter_credentials(context):
 def click_login_button(context):
     try:
         # login_button = driver.find_element_by_xpath('/html/body/div[3]/div[2]/div[2]/div/div/div[2]/form/button')
-        login_button = driver.find_element_by_xpath('//*[@data-id="submit-login"]11')
+        login_button = driver.find_element_by_xpath('//*[@data-id="submit-login"]')
         login_button.click()
     except NoSuchElementException as e:
         print("login button can't be found")
         raise e
-
 
 
 @then("user remains in the same page")
