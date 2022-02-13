@@ -1,5 +1,5 @@
 **Goal**  
-Implement some tests using selenium & behave on page "https://app.sysdigcloud.com/" in less than 2 hours.
+Implement some tests using selenium & behave on target page in less than 2 hours.
 Since there's a time limit, I prioritized finding as many locators as possible and running more tests over best practices 
 such as page object model.
 

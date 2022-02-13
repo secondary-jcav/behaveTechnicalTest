@@ -4,6 +4,7 @@ from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver import Chrome
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
+from login_page.secrets import *
 
 # Steps defined in login.feature are implemented here
 
@@ -12,9 +13,9 @@ from selenium.webdriver.support.wait import WebDriverWait
 def open_login_page(context):
     global driver
     driver = Chrome(context.chrome_path)
-    driver.get("https://app.sysdigcloud.com/")
+    driver.get("URL goes here")
     try:
-        WebDriverWait(driver, 10).until(EC.title_is("Sysdig Monitor"))
+        WebDriverWait(driver, 10).until(EC.title_is("Page Title"))
     except TimeoutException:
         raise AssertionError(f"Page title is {driver.title}")
 
@@ -43,7 +44,7 @@ def click_login_button(context):
 
 @then("user remains in the same page")
 def failed_login(context):
-    assert driver.current_url == "https://app.sysdigcloud.com/#/login", f"User has navigated to {driver.current_url}"
+    assert driver.current_url == "Page Title", f"User has navigated to {driver.current_url}"
 
 
 @then(u'page goes to reset password')
